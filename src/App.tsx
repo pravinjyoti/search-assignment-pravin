@@ -40,14 +40,12 @@ import { InputTemplate } from "./templates/inputTemplates.js";
 function App() {
   const [searchstaxInstance, setSearchstaxInstance] =
     useState<Searchstax | null>(null);
-  const [isGridView, setIsGridView] = useState(() => {
-    return false;
-  });
-  const [hasSearched, setHasSearched] = useState(false);
+  // const [isGridView, setIsGridView] = useState(false);
+  // const [hasSearched, setHasSearched] = useState(false);
 
-  const toggleView = () => {
-    setIsGridView((prev) => !prev);
-  };
+  // const toggleView = () => {
+  //   setIsGridView((prev) => !prev);
+  // };
 
   function makeId(length: number) {
     let result = "";
@@ -69,7 +67,7 @@ function App() {
 
   function afterSearch(results: ISearchstaxParsedResult[]) {
     const copy = [...results];
-    setHasSearched(true);
+    // setHasSearched(true);
     return copy;
   }
 
@@ -123,13 +121,13 @@ function App() {
               searchSortingTemplate={searchSortingTemplate}
             />
           </div>
-          <div className="view-toggle-container">
+          {/* <div className="view-toggle-container">
             {hasSearched && (
               <button onClick={toggleView}>
                 {isGridView ? "Switch to List View" : "Switch to Grid View"}
               </button>
             )}
-          </div>
+          </div> */}
 
           <div className="searchstax-page-layout-facet-result-container">
             <div className="searchstax-page-layout-facet-container">
@@ -157,9 +155,7 @@ function App() {
                 resultsPerPage={renderConfig.resultsWidget.itemsPerPage}
                 renderMethod={renderConfig.resultsWidget.renderMethod}
                 noResultTemplate={noResultTemplate}
-                resultsTemplate={
-                  isGridView ? gridResultsTemplate : resultsTemplate
-                }
+                resultsTemplate={resultsTemplate}
               />
               <SearchstaxPaginationWidget
                 infiniteScrollTemplate={infiniteScrollTemplate}

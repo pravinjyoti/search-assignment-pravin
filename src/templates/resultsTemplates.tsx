@@ -80,7 +80,7 @@ export function resultsTemplate(
                 {searchResult.thumbnail && (
                   <img
                     src={searchResult.thumbnail}
-                    alt={searchResult.title}
+                    alt={searchResult.title || undefined}
                     className="searchstax-thumbnail"
                   />
                 )}
@@ -159,7 +159,7 @@ export function gridResultsTemplate(
                 {searchResult.thumbnail && (
                   <img
                     src={searchResult.thumbnail}
-                    alt={searchResult.title}
+                    alt={searchResult.title || undefined}
                     className="searchstax-grid-thumbnail"
                   />
                 )}
