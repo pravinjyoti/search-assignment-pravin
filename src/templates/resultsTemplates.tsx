@@ -50,6 +50,7 @@ export function resultsTemplate(
     event: any
   ) => ISearchstaxParsedResult[]
 ): React.ReactElement {
+  console.log("searchResults::", searchResults);
   return (
     <>
       {searchResults && searchResults.length > 0 && (

@@ -92,6 +92,7 @@ function App() {
 
   return (
     <>
+      {/* This is for taking the configurations */}
       <SearchstaxWrapper
         searchURL={config.searchURL}
         suggesterURL={config.suggesterURL}
@@ -155,7 +156,7 @@ function App() {
                 resultsPerPage={renderConfig.resultsWidget.itemsPerPage}
                 renderMethod={renderConfig.resultsWidget.renderMethod}
                 noResultTemplate={noResultTemplate}
-                resultsTemplate={resultsTemplate}
+                resultsTemplate={resultsTemplate} //UI custom component
               />
               <SearchstaxPaginationWidget
                 infiniteScrollTemplate={infiniteScrollTemplate}
