@@ -19,7 +19,7 @@ export function searchOverviewTemplate(
                 {searchFeedbackData.endResultIndex}
               </strong>{" "}
               of <strong>{searchFeedbackData.totalResults}</strong> results
-              {searchFeedbackData.searchTerm && (
+              {searchFeedbackData.searchTerm != '*' && (
                 <span className="searchstax-feedback-query">
                   {" "}
                   for "<strong>{searchFeedbackData.searchTerm}</strong>"{" "}
