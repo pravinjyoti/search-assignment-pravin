@@ -78,14 +78,11 @@ function App() {
     return copy;
   }
   function beforeAutosuggest(props: ISearchstaxSuggestProps) {
-    // gets suggestProps, if passed along further autosuggest will execute, if null then event gets canceled
-    // props can be modified and passed along
     const propsCopy = { ...props };
     return propsCopy;
   }
 
   function afterLinkClick(result: ISearchstaxParsedResult) {
-    // gets result that was clicked, if passed along further functions will execute, if null then event gets canceled
     const resultCopy = { ...result };
 
     return resultCopy;

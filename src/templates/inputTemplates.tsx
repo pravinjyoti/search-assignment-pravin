@@ -31,7 +31,7 @@ export function InputTemplate(
                   onMouseOver(suggestion);
                 }}
                 tabIndex={0}
-                onClick={() => {
+                onMouseDown={() => {
                   onMouseClick();
                 }}
               ></div>
